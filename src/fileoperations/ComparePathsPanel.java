@@ -5,6 +5,8 @@
 //  Description: Compare the paths of two files.
 package fileoperations;
 
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -38,14 +40,38 @@ class ComparePathsPanel extends JPanel {
      * Initialize the components for the GUI
      */
     private void initComponents() {
+        // Initialize the components
         fileChooser1 = new JFileChooser();
         fileChooser2 = new JFileChooser();
-        submitButton = new JButton();
+        submitButton = new JButton("Submit");
         resultsArea = new JTextArea(2, 50);
         
+        // Initialize the subpanels
+        JPanel fileChooserPanel = new JPanel();
+        
+        // Set the text area to not editable
+        resultsArea.setEditable(false);
+        
+        // Add a listener for the button
         submitButton.addActionListener(new SubmitListener());
+        
+        // Set the layout for the panel and subpanels
+        fileChooserPanel.setLayout(new GridLayout(1, 2));
+        setLayout(new BorderLayout());
+        
+        // Add the file choosers to the subpanel
+        fileChooserPanel.add(fileChooser1);
+        fileChooserPanel.add(fileChooser2);
+        
+        // Add the components to the main panel
+        add(fileChooserPanel, BorderLayout.NORTH);
+        add(resultsArea, BorderLayout.CENTER);
+        add(submitButton, BorderLayout.SOUTH);
     }
     
+    /**
+     * Listener for the submit button. Compares the two files submitted.
+     */
     private class SubmitListener implements ActionListener {
 
         @Override
