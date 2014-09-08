@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/fileoperations/ComparePathsPanel.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>105</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/ComparePathsPanel.java</file>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/FileOperationsPane.java</file>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/ModificationTimePanel.java</file>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/DirectoryPanel.java</file>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/DeleteFilePanel.java</file>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/FileExistsPanel.java</file>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/FileOperations.java</file>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/TempFilePanel.java</file>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/FileCreationPanel.java</file>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/RenameFilePanel.java</file>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/FileBytesPanel.java</file>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/ModificationDatePanel.java</file>
+            <file>file:/Users/csiebler/Projects/FileOperations/src/fileoperations/ReadOnlyPanel.java</file>
+        </group>
+    </open-files>
+</project-private>

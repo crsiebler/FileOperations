@@ -23,7 +23,10 @@ import javax.swing.JTextArea;
 class ComparePathsPanel extends JPanel {
     
     // Define the Result strings that are reused often
+    private static final String FILE_HEADER_1 = "File Path 1\n==========\n";
+    private static final String FILE_HEADER_2 = "File Path 2\n==========\n";
     private static final String ALIKE = "Files are within the same directory!";
+    private static final String DIFFERENT = "Files are in separate directories";
     private static final String CANCEL = "CANCELLED: User did not select two files";
     private static final String NEW_LINE = "\n";
     
@@ -49,8 +52,8 @@ class ComparePathsPanel extends JPanel {
         // Initialize the components
         fileChooser1 = new JFileChooser();
         fileChooser2 = new JFileChooser();
-        submitButton = new JButton("Submit");
-        resultsArea = new JTextArea(5, 50);
+        submitButton = new JButton("Select Files");
+        resultsArea = new JTextArea(10, 50);
         
         // Initialize the subpanels
         JPanel fileChooserPanel = new JPanel();
@@ -103,15 +106,24 @@ class ComparePathsPanel extends JPanel {
                 File file2 = fileChooser2.getSelectedFile();
                 
                 // Display the selected file paths
+                resultsArea.append(FILE_HEADER_1);
                 resultsArea.append(file1.getParent());
                 resultsArea.append(NEW_LINE);
+                resultsArea.append(NEW_LINE);
+                resultsArea.append(FILE_HEADER_2);
                 resultsArea.append(file2.getParent());
                 
                 // Check if the two paths are the same
                 if (file1.getParent().equals(file2.getParent())) {
                     resultsArea.append(NEW_LINE);
                     resultsArea.append(NEW_LINE);
+                    resultsArea.append(NEW_LINE);
                     resultsArea.append(ALIKE);
+                } else {
+                    resultsArea.append(NEW_LINE);
+                    resultsArea.append(NEW_LINE);
+                    resultsArea.append(NEW_LINE);
+                    resultsArea.append(DIFFERENT);
                 }
             } else {
                 // User did not select two files
