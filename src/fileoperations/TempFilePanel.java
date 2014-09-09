@@ -2,7 +2,7 @@
 //  Name: Cory Siebler
 //  StudentID: 1000832292
 //  Lecture Topic: CSE 494 @ 7:30 MW
-//  Description: (Description of each file/class)
+//  Description: Create a temporary file that is deleted upon exit of program.
 package fileoperations;
 
 import java.awt.BorderLayout;

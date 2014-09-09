@@ -2,7 +2,8 @@
 //  Name: Cory Siebler
 //  StudentID: 1000832292
 //  Lecture Topic: CSE 494 @ 7:30 MW
-//  Description: (Description of each file/class)
+//  Description: Open a file save dialog and allow the user to specify the name
+//              and location to save a file.
 package fileoperations;
 
 import java.awt.BorderLayout;

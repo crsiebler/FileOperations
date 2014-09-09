@@ -2,7 +2,7 @@
 //  Name: Cory Siebler
 //  StudentID: 1000832292
 //  Lecture Topic: CSE 494 @ 7:30 MW
-//  Description: (Description of each file/class)
+//  Description: Modify a file so that it is read-only.
 package fileoperations;
 
 import java.awt.BorderLayout;

@@ -2,7 +2,8 @@
 //  Name: Cory Siebler
 //  StudentID: 1000832292
 //  Lecture Topic: CSE 494 @ 7:30 MW
-//  Description: (Description of each file/class)
+//  Description: Allow the user to select a file and display the file size in
+//              bytes.
 package fileoperations;
 
 import java.awt.BorderLayout;

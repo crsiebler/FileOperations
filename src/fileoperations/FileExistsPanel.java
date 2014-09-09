@@ -2,7 +2,8 @@
 //  Name: Cory Siebler
 //  StudentID: 1000832292
 //  Lecture Topic: CSE 494 @ 7:30 MW
-//  Description: (Description of each file/class)
+//  Description: Allow the user to specify a file name and path. Then check if
+//              that file exists on the system.
 package fileoperations;
 
 import java.awt.BorderLayout;
