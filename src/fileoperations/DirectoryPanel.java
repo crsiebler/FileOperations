@@ -6,7 +6,6 @@
 package fileoperations;
 
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -25,13 +24,13 @@ class DirectoryPanel extends JPanel {
 
     // Define the Result strings that are reused often
     private static final String EMPTY = "";
-    private static final String FILE_NAME = "Test.tmp";
+    private static final String FILE_NAME = "/Test.txt";
     private static final String ERROR_MESSAGE = "ERROR: Could not create file";
     private static final String CREATED = "SUCCESS: File created";
-    private static final String CANCEL = "CANCELLED: User did not save a file";
+    private static final String CANCEL = "CANCELLED: User did not select a directory";
     private static final String NEW_LINE = "\n";
     
-    // Declare two file choosers to compare
+    // Declare file chooser to select the directory to save to
     JFileChooser fileChooser;
     
     // Declare components for comparing
@@ -54,17 +53,13 @@ class DirectoryPanel extends JPanel {
         submitButton = new JButton("Save File");
         resultsArea = new JTextArea(10, 50);
         
-        // Initialize the subpanels
-        JPanel fileChooserPanel = new JPanel();
-        
         // Set the text area to not editable
         resultsArea.setEditable(false);
         
         // Add a listener for the button
         submitButton.addActionListener(new SubmitListener());
         
-        // Set the layout for the panel and subpanels
-        fileChooserPanel.setLayout(new GridLayout(1, 2));
+        // Set the layout for the panel
         setLayout(new BorderLayout());
         
         // Add the components to the main panel
@@ -98,13 +93,16 @@ class DirectoryPanel extends JPanel {
             // Make sure the user selected a file
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                 // Grab the path for the user selected file
-                File file = fileChooser.getCurrentDirectory();
+                File file = fileChooser.getSelectedFile();
                 
                 // Display the selected file paths
                 resultsArea.append(file.getPath());
                 
+                // Create a new file to write to
+                File newFile = new File (file + FILE_NAME);
+                
                 // Create the file in the user selected directory
-                try (FileWriter fw = new FileWriter(file + FILE_NAME)) {
+                try (FileWriter fw = new FileWriter(newFile)) {
                     // Write an empty string to the file
                     fw.write(EMPTY);
 

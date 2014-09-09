@@ -6,7 +6,6 @@
 package fileoperations;
 
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -31,7 +30,7 @@ class FileCreationPanel extends JPanel {
     private static final String CANCEL = "CANCELLED: User did not save a file";
     private static final String NEW_LINE = "\n";
     
-    // Declare two file choosers to compare
+    // Declare file chooser to save a file
     JFileChooser fileChooser;
     
     // Declare components for comparing
@@ -54,17 +53,13 @@ class FileCreationPanel extends JPanel {
         submitButton = new JButton("Save File");
         resultsArea = new JTextArea(10, 50);
         
-        // Initialize the subpanels
-        JPanel fileChooserPanel = new JPanel();
-        
         // Set the text area to not editable
         resultsArea.setEditable(false);
         
         // Add a listener for the button
         submitButton.addActionListener(new SubmitListener());
         
-        // Set the layout for the panel and subpanels
-        fileChooserPanel.setLayout(new GridLayout(1, 2));
+        // Set the layout for the panel
         setLayout(new BorderLayout());
         
         // Add the components to the main panel
